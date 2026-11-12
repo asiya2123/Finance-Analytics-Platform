@@ -4,9 +4,10 @@
 
 ```text
 Revenue_BI_Platform/
+├── index.html                # Root entry point for static hosting (for example, GitHub Pages)
 ├── frontend/                 # Website pages, styles, scripts and Plotly
-│   ├── index.html            # Main dashboard
-│   ├── app.html              # Alternate app page
+│   ├── index.html            # Login page
+│   ├── app.html              # Finance analytics dashboard
 │   └── assets/
 │       ├── css/              # Stylesheets
 │       └── js/               # Frontend JavaScript and chart engine
@@ -27,6 +28,9 @@ Revenue_BI_Platform/
 5. Open http://127.0.0.1:8000/api/health to check server status.
 
 The first launch installs packages from `backend/requirements.txt`, so internet access is needed during installation. Uploaded files are stored under `backend/data/`. No PostgreSQL or MySQL database is required.
+
+## Static deployment
+The repository-root `index.html` opens the frontend login page and is suitable as the entry point for GitHub Pages. Enable GitHub Pages for the repository's deployment branch and select the repository root as the publishing source. The static frontend can use its browser-side demo data, but backend APIs and local dataset uploads require the FastAPI server and are not provided by GitHub Pages.
 
 ## SQL support
 - Upload supported datasets using `POST /api/datasets/upload`.
