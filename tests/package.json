@@ -1,0 +1,7 @@
+{
+  "name": "revenue-bi-tests",
+  "private": true,
+  "scripts": {
+    "test": "node smoke.js"
+  }
+}
